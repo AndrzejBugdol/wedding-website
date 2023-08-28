@@ -4,7 +4,7 @@ import React from 'react';
 function MenuBar() {
   return (
     <div className='absolute right-0 top-0 mt-8 w-3/6'>
-      <ul className='flex items-center justify-center gap-9'>
+      <ul className='hidden items-center justify-center gap-14 md:flex'>
         <Link className='leading-6' href='#about'>
           O NAS
         </Link>

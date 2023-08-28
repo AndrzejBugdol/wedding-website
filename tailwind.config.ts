@@ -15,10 +15,12 @@ const config: Config = {
       },
     },
     fontFamily: {
-      header: ['__angellaWhite_64efad', 'Poppins', 'sans-serif'],
+      header: ['__angellaWhite_64efad', 'sans-serif'],
     },
     colors: {
-      header: '#D6A1E6',
+      mainHeader: '#D6A1E6',
+      aboutHeader: '#E7ABA1',
+      baseColor: '#644F44',
     },
   },
   plugins: [],

@@ -3,7 +3,7 @@ import localFont from 'next/font/local';
 
 export const cormorantGarmond = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['300', '400', '700'],
   style: ['italic', 'normal'],
 });
 
