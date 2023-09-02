@@ -20,6 +20,7 @@ const config: Config = {
     colors: {
       mainHeader: '#D6A1E6',
       aboutHeader: '#E7ABA1',
+      weddingHeader: '#F3A5A5',
       baseColor: '#644F44',
     },
   },
