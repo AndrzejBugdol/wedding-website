@@ -25,7 +25,7 @@ function Wedding() {
             mapsLink='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
           />
           <div className='w-[200px]'>
-            <h4 className='text-center text-base text-lg font-bold'>
+            <h4 className='text-center text-lg font-bold'>
               Po ślubie zapraszamy serdecznie na przyjęcie weselne!
             </h4>
           </div>

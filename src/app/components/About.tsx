@@ -10,8 +10,8 @@ function About() {
         <h1 className='font-header text-8xl text-aboutHeader'>
           Nasza historia
         </h1>
-        <div className='flex w-3/6  items-center justify-center '>
-          <h4 className='text-base text-baseColor'>
+        <div className='flex items-center  justify-center px-16 '>
+          <h4 className='text-justify text-base text-baseColor'>
             Poznaliśmy się w 2017 roku w organizacji studenckiej. W czerwcu 2017
             roku zostaliśmy parą i (xXX) <br />
             <br /> Zaręczyliśmy się 31 maja 2023 roku w pięknej włoskiej

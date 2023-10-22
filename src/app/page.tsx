@@ -1,6 +1,7 @@
 import MainPage from '@/app/components/Main'
 import About from './components/About';
 import Wedding from './components/Wedding';
+import Organization from './components/Organization';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <MainPage />
       <About />
       <Wedding />
+      <Organization />
     </>
   );
 }

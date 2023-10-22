@@ -14,7 +14,7 @@ function Main() {
       <div className='flex flex-1 flex-col items-center justify-between gap-16'>
         <div className='flex flex-col items-center'>
           <h1 className='font-header text-8xl text-mainHeader'>
-            Kasia E Andrzej
+            Kasia i Andrzej
           </h1>
           <h3 className='text-3xl font-medium italic'>
             31 maja 2024, godzina 14:00
