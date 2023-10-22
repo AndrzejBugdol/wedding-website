@@ -2,14 +2,22 @@ import React from 'react';
 import keyIcon from '../../assets/photos/ikona klucze.png';
 import kidIcon from '../../assets/photos/ikona dziecko.png';
 import busIcon from '../../assets/photos/ikona_autobus.png';
-import flowersIcon from '../../assets/photos//ikona_kwiatki.png';
+import flowersIcon from '../../assets/photos/ikona_kwiatki.png';
+import flowersPhoto from '../../assets/photos/kwiaty4.png';
 
 import PageLayout from '@/components/PageLayout';
 import Tile from '@/components/Tiles';
+import Image from 'next/image';
 
 function Organization() {
   return (
     <PageLayout id='home'>
+      <Image
+        src={flowersPhoto}
+        alt='org_flowers'
+        height={200}
+        className='absolute right-0 top-0 -z-10'
+      />
       <div className='flex h-full w-full flex-col items-center justify-evenly'>
         <div className='flex flex-col items-center'>
           <h1 className='font-header text-8xl text-weddingHeader'>

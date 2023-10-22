@@ -1,13 +1,15 @@
 import React from 'react';
 import photo from '@/assets/photos/naszahistoria_przyciete.jpg';
+import flowersPhoto from '@/assets/photos/kwiaty2_przyciete.png';
 import { ScreenImage } from '@/components/ScreenImage';
 import PageLayout from '@/components/PageLayout';
+import Image from 'next/image';
 
 function About() {
   return (
     <PageLayout id='about' className='justify-between'>
-      <div className='flex w-3/6 flex-col items-center justify-start gap-6'>
-        <h1 className='font-header text-8xl text-aboutHeader'>
+      <div className='flex h-full w-3/6 flex-col items-center justify-between'>
+        <h1 className='pt-8 font-header text-8xl text-aboutHeader'>
           Nasza historia
         </h1>
         <div className='flex items-center  justify-center px-16 '>
@@ -21,6 +23,7 @@ function About() {
             dni przed naszą 7 rocznicą związku!
           </h4>
         </div>
+        <Image src={flowersPhoto} alt='about_flowers' height={150} />
       </div>
       <ScreenImage src={photo} alt='about' />
     </PageLayout>
