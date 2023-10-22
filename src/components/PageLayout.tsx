@@ -8,10 +8,13 @@ type PageLayoutProps = {
 
 function PageLayout({ children, id, className }: PageLayoutProps) {
   return (
-    <div className='flex h-[800px] items-center justify-center' id={id}>
+    <div
+      className='block items-start justify-center laptop:flex laptop:h-[800px] laptop:items-center'
+      id={id}
+    >
       <div
         className={twMerge(
-          'relative flex h-[70%] w-[1024px] items-center justify-center gap-0 border-[1.5px] border-solid border-borderColor border-opacity-25',
+          'relative flex w-[425px] flex-col items-center justify-center gap-0 border-solid border-borderColor border-opacity-25 laptop:h-[70%] laptop:w-[1024px] laptop:flex-row laptop:border-[1.5px]',
           className
         )}
       >

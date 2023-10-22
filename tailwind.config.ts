@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
   content: [
@@ -28,6 +29,16 @@ const config: Config = {
       test: '#DADADA',
       borderColor: '#334155',
       white: '#fff',
+    },
+    screens: {
+      mobile: '800px',
+      laptop: '900px',
+      ...defaultTheme.screens,
+    },
+    spacing: {
+      '800px': '800px',
+      '1024px': '1024px',
+      ...defaultTheme.spacing,
     },
   },
   plugins: [],

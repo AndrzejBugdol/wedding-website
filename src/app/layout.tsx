@@ -17,7 +17,9 @@ export default function RootLayout({
     <html lang='en' className='scroll-smooth'>
       <body className={cormorantGarmond.className}>
         <MenuBar />
-        <div>{children}</div>
+        <div className='flex flex-col items-center gap-4 laptop:block laptop:gap-0'>
+          {children}
+        </div>
       </body>
     </html>
   );

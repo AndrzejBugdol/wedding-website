@@ -10,9 +10,12 @@ type ScreenImageProps = {
 
 export const ScreenImage = ({ src, alt, bg, className }: ScreenImageProps) => {
   return (
-    <div className={`flex h-full ${bg}`}>
+    <div className={`flex laptop:h-full laptop:w-auto ${bg}`}>
       <Image
-        className={twMerge(className, 'max-h-full w-full object-cover')}
+        className={twMerge(
+          className,
+          'object-top laptop:mt-0 laptop:w-full laptop:object-cover'
+        )}
         src={src}
         alt={alt}
       ></Image>
