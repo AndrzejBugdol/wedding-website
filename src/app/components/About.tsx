@@ -1,11 +1,11 @@
 import React from 'react';
+import photo from '@/assets/photos/naszahistoria_przyciete.jpg';
+import { ScreenImage } from '@/components/ScreenImage';
+import PageLayout from '@/components/PageLayout';
 
 function About() {
   return (
-    <div
-      id='about'
-      className='flex h-screen flex-col items-center  justify-center md:flex-row'
-    >
+    <PageLayout id='about' className='justify-between'>
       <div className='flex w-3/6 flex-col items-center justify-start gap-6'>
         <h1 className='font-header text-8xl text-aboutHeader'>
           Nasza historia
@@ -22,8 +22,8 @@ function About() {
           </h4>
         </div>
       </div>
-      <div className='flex w-3/6 items-center justify-center'>Foto</div>
-    </div>
+      <ScreenImage src={photo} alt='about' />
+    </PageLayout>
   );
 }
 

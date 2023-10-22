@@ -6,6 +6,9 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  container: {
+    center: true,
+  },
   theme: {
     extend: {
       backgroundImage: {
@@ -22,6 +25,9 @@ const config: Config = {
       aboutHeader: '#E7ABA1',
       weddingHeader: '#F3A5A5',
       baseColor: '#644F44',
+      test: '#DADADA',
+      borderColor: '#334155',
+      white: '#fff',
     },
   },
   plugins: [],

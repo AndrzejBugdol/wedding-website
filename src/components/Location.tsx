@@ -1,8 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 type Location = {
-  src: string;
+  src: StaticImageData;
   alt: string;
   name: string;
   description: string;
@@ -10,14 +10,14 @@ type Location = {
 };
 function Location({ src, alt, name, description, mapsLink }: Location) {
   return (
-    <div>
-      <Image src={src} alt={alt}></Image>
-      <div>
-        <h4>{name}</h4>
-        <h4>{description}</h4>
+    <div className='flex flex-col items-center justify-between gap-7'>
+      <Image src={src} alt={alt} height={200}></Image>
+      <div className='flex flex-col items-center justify-center'>
+        <h4 className='text-center'>{name}</h4>
+        <h4 className='text-center'>{description}</h4>
       </div>
-      <a href={mapsLink} target='_blank'>
-        Mapy google
+      <a href={mapsLink} target='_blank' className='tracking-wider'>
+        MAPY GOOGLE
       </a>
     </div>
   );
