@@ -1,9 +1,7 @@
-import Image, { StaticImageData } from 'next/image';
+import Image, { StaticImageData, ImageProps } from 'next/image';
 import { twMerge } from 'tailwind-merge';
 
-type ScreenImageProps = {
-  src: StaticImageData;
-  alt: string;
+type ScreenImageProps = ImageProps & {
   bg?: string;
   className?: string;
 };

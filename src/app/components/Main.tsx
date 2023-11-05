@@ -11,7 +11,7 @@ function Main() {
   return (
     <PageLayout id='home'>
       <ScreenImage src={photo} alt='andrzej-kasia' className='object-left' />
-      <div className='mt-6 flex flex-1 flex-col items-center justify-evenly laptop:mt-0 laptop:justify-between laptop:gap-16'>
+      <div className='my-6 flex flex-1 flex-col items-center justify-evenly gap-8 laptop:mt-0 laptop:justify-between laptop:gap-16'>
         <div className='flex flex-col items-center'>
           <h1 className='text-center font-header text-7xl text-mainHeader laptop:text-left laptop:text-8xl'>
             Kasia i Andrzej
@@ -23,8 +23,18 @@ function Main() {
         <div>
           <div className='box flex gap-20'>
             <div className='flex flex-col items-center justify-evenly uppercase laptop:justify-between laptop:gap-10'>
-              <Image src={ringsIcon} width={80} alt='rings'></Image>
-              <Image src={glassIcon} width={80} alt='rings'></Image>
+              <Image
+                src={ringsIcon}
+                width={80}
+                alt='rings'
+                className='scale-75 laptop:scale-0'
+              ></Image>
+              <Image
+                src={glassIcon}
+                width={80}
+                alt='rings'
+                className='scale-75 laptop:scale-0'
+              ></Image>
             </div>
             <div className='flex flex-col justify-evenly gap-10 uppercase'>
               <div className='flex w-full flex-col justify-center'>

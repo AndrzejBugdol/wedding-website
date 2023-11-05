@@ -16,16 +16,16 @@ function Organization() {
         src={flowersPhoto}
         alt='org_flowers'
         height={200}
-        className='absolute right-0 top-0 -z-10'
+        className='laptop-0 absolute -right-14 -top-10 -z-10 scale-75 laptop:right-0 laptop:scale-0'
       />
-      <div className='flex h-full w-full flex-col items-center justify-evenly'>
+      <div className='mb-4 flex h-full w-full flex-col items-center justify-evenly laptop:mb-0'>
         <div className='flex flex-col items-center'>
-          <h1 className='font-header text-8xl text-weddingHeader'>
+          <h1 className='p-8 font-header text-8xl text-weddingHeader laptop:p-0'>
             Organizacja
           </h1>
         </div>
         <div className='flex flex-col gap-6'>
-          <div className='flex items-center justify-center gap-6'>
+          <div className='flex flex-col items-center justify-center gap-6 laptop:flex-row'>
             <Tile src={keyIcon} alt='org_key' className='h-[150px]'>
               <h4>
                 Dla wszystkich gości przyjezdnych ze Śląska oraz Krakowa
@@ -44,7 +44,7 @@ function Organization() {
               </h4>
             </Tile>
           </div>
-          <div className='flex items-center justify-center gap-6'>
+          <div className='flex flex-col items-center justify-center gap-6 laptop:flex-row'>
             <Tile
               src={busIcon}
               alt='org_bus'

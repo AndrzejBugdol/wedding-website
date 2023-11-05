@@ -8,11 +8,11 @@ import Image from 'next/image';
 function About() {
   return (
     <PageLayout id='about' className='justify-between'>
-      <div className='flex h-full w-3/6 flex-col items-center justify-between'>
+      <div className='flex h-full flex-col items-center justify-between laptop:w-3/6'>
         <h1 className='pt-8 font-header text-8xl text-aboutHeader'>
           Nasza historia
         </h1>
-        <div className='flex items-center  justify-center px-16 '>
+        <div className='flex items-center justify-center p-8 laptop:px-16 '>
           <h4 className='text-justify text-base text-baseColor'>
             Poznaliśmy się w 2017 roku w organizacji studenckiej. W czerwcu 2017
             roku zostaliśmy parą i (xXX) <br />

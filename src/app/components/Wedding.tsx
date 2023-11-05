@@ -14,18 +14,18 @@ function Wedding() {
         src={flowersPhoto}
         alt='wedding_flowers'
         height={200}
-        className='absolute -right-10 -top-10 z-10 mix-blend-screen'
+        className='absolute -right-24 -top-14 z-10 scale-50 mix-blend-screen laptop:-right-10 laptop:-top-10 laptop:scale-100'
       />
       <div className='flex h-full w-full flex-col items-center justify-evenly'>
         <div className='flex flex-col items-center'>
-          <h1 className='font-header text-8xl text-weddingHeader'>
+          <h1 className='p-6 text-center font-header text-8xl text-weddingHeader laptop:p-0'>
             Ślub i Wesele
           </h1>
           <h3 className='text-3xl font-medium italic'>
             31.05.2024 godzina 14:00
           </h3>
         </div>
-        <div className='flex w-full items-center justify-evenly'>
+        <div className='laptop:gap:0 my-4 flex w-full flex-col items-center justify-evenly gap-4 laptop:my-0 laptop:flex-row'>
           <Location
             name='KOŚCIÓŁ PW. ŚW, BARBARY'
             description='GRODZISKO DOLNE 248'

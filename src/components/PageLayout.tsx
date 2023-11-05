@@ -14,7 +14,7 @@ function PageLayout({ children, id, className }: PageLayoutProps) {
     >
       <div
         className={twMerge(
-          'relative flex w-[425px] flex-col items-center justify-center gap-0 border-solid border-borderColor border-opacity-25 laptop:h-[70%] laptop:w-[1024px] laptop:flex-row laptop:border-[1.5px]',
+          'relative flex w-[425px] flex-col items-center justify-center gap-0 border-b-[1.5px] border-solid border-borderColor border-opacity-25 laptop:h-[70%] laptop:w-[1024px] laptop:flex-row laptop:border-[1.5px]',
           className
         )}
       >

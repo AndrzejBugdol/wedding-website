@@ -13,7 +13,7 @@ function Tile({ src, alt, children, className, imageSize }: Tile) {
   return (
     <div
       className={twMerge(
-        'flex h-[200px] w-[400px] items-center justify-evenly gap-4 border-[1.5px] border-solid border-aboutHeader px-5',
+        'flex h-[200px] w-[350px] items-center justify-evenly gap-4 border-[1.5px] border-solid border-aboutHeader px-5 laptop:w-[400px]',
         className
       )}
     >
