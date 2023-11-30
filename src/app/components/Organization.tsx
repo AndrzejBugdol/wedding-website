@@ -11,14 +11,14 @@ import Image from 'next/image';
 
 function Organization() {
   return (
-    <PageLayout id='home'>
+    <PageLayout id='info'>
       <Image
         src={flowersPhoto}
         alt='org_flowers'
         height={200}
-        className='laptop-0 absolute -right-14 -top-10 -z-10 scale-75 laptop:right-0 laptop:scale-0'
+        className='laptop-0 absolute -right-10 -top-10 -z-10 scale-75 laptop:right-0 laptop:scale-0'
       />
-      <div className='mb-4 flex h-full w-full flex-col items-center justify-evenly laptop:mb-0'>
+      <div className='mb-4 flex h-full w-full flex-col items-center justify-evenly pt-10 laptop:mb-0 laptop:pt-0'>
         <div className='flex flex-col items-center'>
           <h1 className='p-8 font-header text-8xl text-weddingHeader laptop:p-0'>
             Organizacja
@@ -48,7 +48,7 @@ function Organization() {
             <Tile
               src={busIcon}
               alt='org_bus'
-              className='flex-col-reverse gap-0'
+              className='flex-col-reverse gap-0 p-2'
               imageSize={50}
             >
               <h4>

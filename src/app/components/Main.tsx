@@ -27,13 +27,13 @@ function Main() {
                 src={ringsIcon}
                 width={80}
                 alt='rings'
-                className='scale-75 laptop:scale-0'
+                className='scale-75 laptop:scale-100'
               ></Image>
               <Image
                 src={glassIcon}
                 width={80}
                 alt='rings'
-                className='scale-75 laptop:scale-0'
+                className='scale-75 laptop:scale-100'
               ></Image>
             </div>
             <div className='flex flex-col justify-evenly gap-10 uppercase'>

@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 const mobileNavbarClasses =
-  'absolute flex items-center justify-center text-center duration-300 ease-in laptop:hidden';
+  'absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center laptop:hidden';
 
 function MenuBar() {
   const [navCollapse, setNavCollapse] = useState(false);
@@ -14,53 +14,53 @@ function MenuBar() {
     setNavCollapse(!navCollapse);
   };
   return (
-    <div className='fixed left-0 top-0 z-10 w-full bg-white tracking-widest duration-300 ease-in'>
+    <div className='fixed left-0 top-0 z-20 w-full bg-white tracking-widest duration-300 ease-in'>
       <ul className='m-auto hidden max-w-[1240px] items-center justify-evenly py-4 text-borderColor laptop:flex'>
-        <Link className='leading-6' href='#home'>
+        <Link className='leading-6' href='#home' onClick={handleNavChange}>
           HOME
         </Link>
-        <Link className='leading-6' href='#about'>
+        <Link className='leading-6' href='#about' onClick={handleNavChange}>
           O NAS
         </Link>
-        <Link className='leading-6' href='#wedding'>
+        <Link className='leading-6' href='#wedding' onClick={handleNavChange}>
           WESELE
         </Link>
-        <Link className='leading-6' href='#info'>
+        <Link className='leading-6' href='#info' onClick={handleNavChange}>
           ORGANIZACJA
         </Link>
-        <Link className='leading-6' href='#contact'>
+        <Link className='leading-6' href='#contact' onClick={handleNavChange}>
           KONTAKT
         </Link>
       </ul>
 
       <div
-        className='fixed left-0 top-0 z-10 block p-1 laptop:hidden'
+        className='fixed left-5 top-5 z-10 block p-1 laptop:hidden'
         onClick={handleNavChange}
       >
         {navCollapse ? (
-          <AiOutlineClose size={20} />
+          <AiOutlineClose size={35} />
         ) : (
-          <AiOutlineMenu size={20} />
+          <AiOutlineMenu size={35} />
         )}
       </div>
       <div
         className={
           navCollapse
             ? `${mobileNavbarClasses}`
-            : `${mobileNavbarClasses} left-[-300px]`
+            : `${mobileNavbarClasses} hidden`
         }
       >
-        <ul className='flex flex-col gap-8 bg-borderColor p-4 pt-6 text-weddingHeader'>
-          <Link className='leading-6' href='#about'>
+        <ul className='flex h-full w-full flex-col justify-center gap-8 bg-borderColor p-4 pt-6 text-weddingHeader'>
+          <Link className='leading-6' href='#about' onClick={handleNavChange}>
             O NAS
           </Link>
-          <Link className='leading-6' href='#wedding'>
+          <Link className='leading-6' href='#wedding' onClick={handleNavChange}>
             WESELE
           </Link>
-          <Link className='leading-6' href='#info'>
+          <Link className='leading-6' href='#info' onClick={handleNavChange}>
             ORGANIZACJA
           </Link>
-          <Link className='leading-6' href='#contact'>
+          <Link className='leading-6' href='#contact' onClick={handleNavChange}>
             KONTAKT
           </Link>
         </ul>

@@ -7,12 +7,12 @@ import Image from 'next/image';
 
 function About() {
   return (
-    <PageLayout id='about' className='justify-between'>
+    <PageLayout id='about' className='flex-col-reverse justify-between'>
       <div className='flex h-full flex-col items-center justify-between laptop:w-3/6'>
         <h1 className='pt-8 font-header text-8xl text-aboutHeader'>
           Nasza historia
         </h1>
-        <div className='flex items-center justify-center p-8 laptop:px-16 '>
+        <div className='laptop:p-0laptop:px-16 flex items-center justify-center p-8  '>
           <h4 className='text-justify text-base text-baseColor'>
             Poznaliśmy się w 2017 roku w organizacji studenckiej. W czerwcu 2017
             roku zostaliśmy parą i (xXX) <br />
@@ -23,7 +23,12 @@ function About() {
             dni przed naszą 7 rocznicą związku!
           </h4>
         </div>
-        <Image src={flowersPhoto} alt='about_flowers' height={150} />
+        <Image
+          src={flowersPhoto}
+          alt='about_flowers'
+          height={150}
+          className='w-full'
+        />
       </div>
       <ScreenImage src={photo} alt='about' />
     </PageLayout>

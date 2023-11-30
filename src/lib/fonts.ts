@@ -8,5 +8,7 @@ export const cormorantGarmond = Cormorant_Garamond({
 });
 
 export const angellaWhite = localFont({
-  src: '../assets/fonts/Angella White.otf',
+  src: '../../public/fonts/Angella White.otf',
+  variable: '--angellaWhite',
+  preload: true,
 });

@@ -19,7 +19,7 @@ const config: Config = {
       },
     },
     fontFamily: {
-      header: ['__angellaWhite_64efad', 'sans-serif'],
+      header: ['var(--angellaWhite)', 'sans-serif'],
     },
     colors: {
       mainHeader: '#D6A1E6',
@@ -31,6 +31,7 @@ const config: Config = {
       white: '#fff',
     },
     screens: {
+      smallScreen: '425px',
       mobile: '800px',
       laptop: '900px',
       ...defaultTheme.screens,

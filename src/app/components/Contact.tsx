@@ -15,7 +15,7 @@ function Contact() {
     <PageLayout id='contact'>
       <div className='flex w-3/6 flex-col items-center gap-10'>
         <h1 className='py-4 font-header text-8xl text-aboutHeader'>Kontakt</h1>
-        <div className='flex items-center justify-center gap-16 '>
+        <div className='flex items-center justify-center gap-8 laptop:gap-16'>
           <div className='flex h-[150px] w-[150px] flex-col items-center justify-center gap-6 border-2 border-solid border-aboutHeader border-opacity-50'>
             <h1 className='font-header text-4xl text-aboutHeader'>Kasia</h1>
             <h3>{formatNumber(process.env.K_NUMBER)}</h3>
