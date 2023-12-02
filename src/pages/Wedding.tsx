@@ -1,17 +1,16 @@
 import React from 'react';
-import Location from '@/components/Location';
-import PageLayout from '@/components/PageLayout';
-import ringsIcon from '../../assets/photos/obraczki.png';
-import glassIcon from '../../assets/photos/kieliszki.png';
-import flowersPhoto from '../../assets/photos/kwiaty3.png';
+import Location from '../components/Location';
+import PageLayout from '../components/PageLayout';
+import ringsIcon from '../assets/photos/obraczki.png';
+import glassIcon from '../assets/photos/kieliszki.png';
+import flowersPhoto from '../assets/photos/kwiaty3.png';
 
-import Image from 'next/image';
 import { LINKS } from '../constants';
 
 function Wedding() {
   return (
     <PageLayout id='wedding'>
-      <Image
+      <img
         src={flowersPhoto}
         alt='wedding_flowers'
         height={200}

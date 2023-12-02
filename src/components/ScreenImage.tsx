@@ -1,7 +1,6 @@
-import Image, { StaticImageData, ImageProps } from 'next/image';
 import { twMerge } from 'tailwind-merge';
 
-type ScreenImageProps = ImageProps & {
+type ScreenImageProps = Partial<HTMLImageElement> & {
   bg?: string;
   className?: string;
 };
@@ -9,14 +8,14 @@ type ScreenImageProps = ImageProps & {
 export const ScreenImage = ({ src, alt, bg, className }: ScreenImageProps) => {
   return (
     <div className={`flex laptop:h-full laptop:w-auto ${bg}`}>
-      <Image
+      <img
         className={twMerge(
           className,
           'object-top laptop:mt-0 laptop:w-full laptop:object-cover'
         )}
         src={src}
         alt={alt}
-      ></Image>
+      ></img>
     </div>
   );
 };

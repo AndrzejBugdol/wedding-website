@@ -1,9 +1,8 @@
 import React from 'react';
-import photo from '@/assets/photos/naszahistoria_przyciete.jpg';
-import flowersPhoto from '@/assets/photos/kwiaty2_przyciete.png';
-import { ScreenImage } from '@/components/ScreenImage';
-import PageLayout from '@/components/PageLayout';
-import Image from 'next/image';
+import photo from '../assets/photos/naszahistoria_przyciete.jpg';
+import flowersPhoto from '../assets/photos/kwiaty2_przyciete.png';
+import { ScreenImage } from '../components/ScreenImage';
+import PageLayout from '../components/PageLayout';
 
 function About() {
   return (
@@ -23,7 +22,7 @@ function About() {
             dni przed naszą 7 rocznicą związku!
           </h4>
         </div>
-        <Image
+        <img
           src={flowersPhoto}
           alt='about_flowers'
           height={150}

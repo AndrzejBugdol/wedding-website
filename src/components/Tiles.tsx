@@ -1,9 +1,8 @@
 import React, { ReactNode } from 'react';
-import Image, { StaticImageData } from 'next/image';
 import { twMerge } from 'tailwind-merge';
 
 type Tile = {
-  src: StaticImageData;
+  src: string;
   alt: string;
   children: ReactNode;
   className?: string;
@@ -20,7 +19,7 @@ function Tile({ src, alt, children, className, imageSize }: Tile) {
       <div className='flex items-center justify-center p-2 text-justify'>
         {children}
       </div>
-      <Image src={src} alt={alt} height={imageSize ?? 100}></Image>
+      <img src={src} alt={alt} height={imageSize ?? 100}></img>
     </div>
   );
 }

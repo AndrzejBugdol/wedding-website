@@ -1,13 +1,12 @@
-import Image from 'next/image';
 import React from 'react';
 
-import ringsIcon from '@/assets/photos/ikona_obraczki.png';
-import glassIcon from '@/assets/photos/ikona_kieliszki.png';
-import photo from '@/assets/photos/pierwsze_przyciete.jpg';
-import { ScreenImage } from '@/components/ScreenImage';
-import PageLayout from '@/components/PageLayout';
+import ringsIcon from '../assets/photos/ikona_obraczki.png';
+import glassIcon from '../assets/photos/ikona_kieliszki.png';
+import photo from '../assets/photos/pierwsze_przyciete.jpg';
+import { ScreenImage } from '../components/ScreenImage';
+import PageLayout from '../components/PageLayout';
 
-function Main() {
+function Hero() {
   return (
     <PageLayout id='home'>
       <ScreenImage src={photo} alt='andrzej-kasia' className='object-left' />
@@ -23,18 +22,18 @@ function Main() {
         <div>
           <div className='box flex gap-20'>
             <div className='flex flex-col items-center justify-evenly uppercase laptop:justify-between laptop:gap-10'>
-              <Image
+              <img
                 src={ringsIcon}
                 width={80}
                 alt='rings'
                 className='scale-75 laptop:scale-100'
-              ></Image>
-              <Image
+              ></img>
+              <img
                 src={glassIcon}
                 width={80}
                 alt='rings'
                 className='scale-75 laptop:scale-100'
-              ></Image>
+              ></img>
             </div>
             <div className='flex flex-col justify-evenly gap-10 uppercase'>
               <div className='flex w-full flex-col justify-center'>
@@ -61,4 +60,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Hero;
