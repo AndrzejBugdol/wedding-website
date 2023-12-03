@@ -12,15 +12,15 @@ export function Wedding() {
       <img
         src={flowersPhoto}
         alt='wedding_flowers'
-        className='absolute -right-20 -top-14 z-10 h-[200px] scale-50 mix-blend-screen laptop:-right-10 laptop:-top-10 laptop:scale-100'
+        className='absolute -right-24 -top-16 z-10 h-[200px] scale-[65%] smallScreen:scale-[45%] laptop:-right-10 laptop:-top-10 laptop:scale-100'
       />
-      <div className='flex h-full w-full flex-col items-center justify-evenly p-10'>
+      <div className='flex h-full w-full flex-col items-center justify-evenly p-10 smallScreen:p-2'>
         <div className='flex flex-col items-center'>
-          <h1 className='p-6 text-center font-header text-8xl text-weddingHeader laptop:p-0'>
+          <h1 className='p-6 text-center font-header text-8xl text-pastelRed smallScreen:text-6xl laptop:p-0'>
             Ślub i Wesele
           </h1>
-          <h3 className='text-3xl font-medium italic'>
-            31.05.2024 godzina 14:00
+          <h3 className='pt-4 font-info text-base font-medium laptop:text-xl'>
+            31 maja 2024, godzina 14:00
           </h3>
         </div>
         <div className='laptop:gap:0 my-4 flex w-full flex-col items-center justify-evenly gap-4 laptop:my-0 laptop:flex-row'>
@@ -31,7 +31,7 @@ export function Wedding() {
             alt='wedding_obraczki'
             mapsLink={LINKS.wedding}
           />
-          <div className='w-[200px]'>
+          <div className='w-[300px] py-4'>
             <h4 className='text-center text-lg font-bold'>
               Po ślubie zapraszamy serdecznie na przyjęcie weselne!
             </h4>

@@ -35,9 +35,9 @@ function MenuBar() {
         onClick={handleNavChange}
       >
         {navCollapse ? (
-          <AiOutlineClose size={35} />
+          <AiOutlineClose size={35} className='text-pastelRed' />
         ) : (
-          <AiOutlineMenu size={35} />
+          <AiOutlineMenu size={35} className='text-pastelRed' />
         )}
       </div>
       <div
@@ -47,7 +47,7 @@ function MenuBar() {
             : `${mobileNavbarClasses} hidden`
         }
       >
-        <ul className='flex h-full w-full flex-col justify-center gap-8 bg-borderColor p-4 pt-6 text-weddingHeader'>
+        <ul className='text-semibold flex h-full w-full flex-col justify-center gap-8 bg-white p-4 pt-6 text-pastelRed'>
           <a className='leading-6' href='#about' onClick={handleNavChange}>
             O NAS
           </a>

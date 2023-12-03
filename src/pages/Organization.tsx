@@ -6,18 +6,19 @@ import flowersPhoto from '../assets/photos/kwiaty4.png';
 
 import PageLayout from '../components/PageLayout';
 import Tile from '../components/Tiles';
- 
+import { LINKS } from '../constants';
+
 export function Organization() {
   return (
     <PageLayout id='info'>
       <img
         src={flowersPhoto}
         alt='org_flowers'
-        className='laptop-0 absolute -right-10 -top-10 -z-10 h-[200px] scale-75 laptop:right-0 laptop:scale-0'
+        className='smallScreen:-top-15 smallScreen:-right-15 absolute -right-10 -top-10 z-10 h-[200px] scale-[90%] smallScreen:scale-[60%] laptop:scale-100'
       />
       <div className='mb-4 flex h-full w-full flex-col items-center justify-evenly pt-10 laptop:mb-0 laptop:pt-0'>
         <div className='flex flex-col items-center'>
-          <h1 className='p-8 font-header text-8xl text-weddingHeader laptop:p-0'>
+          <h1 className='p-8 font-header text-8xl text-pastelRed smallScreen:text-6xl laptop:p-0'>
             Organizacja
           </h1>
         </div>
@@ -65,7 +66,7 @@ export function Organization() {
                 <img
                   src={flowersIcon}
                   alt='org_flowers'
-                  className='h-[100px]'
+                  className='h-[100px] smallScreen:h-[70px]'
                 ></img>
               }
               className='flex-row-reverse'
@@ -74,7 +75,14 @@ export function Organization() {
                 <strong>Zamiast kwiatów będzie nam miło otrzymać:</strong>
                 <br /> - butelki wina do własnej domowej piwniczki <br />-
                 wpłaty na bliską naszym sercom Wielką Orkiestrę Świątecznej
-                Pomocy: Link do płatności
+                Pomocy: <br />{' '}
+                <a
+                  href={LINKS.wosp}
+                  target='_blank'
+                  className='tracking-wider underline hover:text-pastelPink'
+                >
+                  Link do płatności
+                </a>
               </h4>
             </Tile>
           </div>

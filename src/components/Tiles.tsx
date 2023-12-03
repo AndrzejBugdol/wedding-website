@@ -11,7 +11,7 @@ function Tile({ image, children, className }: Tile) {
   return (
     <div
       className={twMerge(
-        'flex h-[200px] w-[90%] items-center justify-evenly gap-4 border-[1.5px] border-solid border-aboutHeader px-5 laptop:w-[400px]',
+        'flex h-[200px] w-[90%] items-center justify-evenly gap-4 border-[1.5px] border-solid border-pastelOrange px-5 smallScreen:h-[300px] smallScreen:flex-col-reverse laptop:w-[400px]',
         className
       )}
     >
