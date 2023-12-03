@@ -1,10 +1,9 @@
-import React from 'react';
 import photo from '../assets/photos/naszahistoria_przyciete.jpg';
 import flowersPhoto from '../assets/photos/kwiaty2_przyciete.png';
 import { ScreenImage } from '../components/ScreenImage';
 import PageLayout from '../components/PageLayout';
 
-function About() {
+export function About() {
   return (
     <PageLayout id='about' className='flex-col-reverse justify-between'>
       <div className='flex h-full flex-col items-center justify-between laptop:w-3/6'>
@@ -25,13 +24,10 @@ function About() {
         <img
           src={flowersPhoto}
           alt='about_flowers'
-          height={150}
-          className='w-full'
+          className='h-[150px] w-full'
         />
       </div>
       <ScreenImage src={photo} alt='about' />
     </PageLayout>
   );
 }
-
-export default About;

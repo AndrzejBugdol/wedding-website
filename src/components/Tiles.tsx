@@ -1,14 +1,13 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 type Tile = {
-  src: string;
-  alt: string;
+  image: ReactNode;
   children: ReactNode;
   className?: string;
-  imageSize?: number;
 };
-function Tile({ src, alt, children, className, imageSize }: Tile) {
+
+function Tile({ image, children, className }: Tile) {
   return (
     <div
       className={twMerge(
@@ -19,7 +18,7 @@ function Tile({ src, alt, children, className, imageSize }: Tile) {
       <div className='flex items-center justify-center p-2 text-justify'>
         {children}
       </div>
-      <img src={src} alt={alt} height={imageSize ?? 100}></img>
+      {image}
     </div>
   );
 }

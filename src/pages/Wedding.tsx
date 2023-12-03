@@ -1,4 +1,3 @@
-import React from 'react';
 import Location from '../components/Location';
 import PageLayout from '../components/PageLayout';
 import ringsIcon from '../assets/photos/obraczki.png';
@@ -7,14 +6,13 @@ import flowersPhoto from '../assets/photos/kwiaty3.png';
 
 import { LINKS } from '../constants';
 
-function Wedding() {
+export function Wedding() {
   return (
     <PageLayout id='wedding'>
       <img
         src={flowersPhoto}
         alt='wedding_flowers'
-        height={200}
-        className='absolute -right-20 -top-14 z-10 scale-50 mix-blend-screen laptop:-right-10 laptop:-top-10 laptop:scale-100'
+        className='absolute -right-20 -top-14 z-10 h-[200px] scale-50 mix-blend-screen laptop:-right-10 laptop:-top-10 laptop:scale-100'
       />
       <div className='flex h-full w-full flex-col items-center justify-evenly p-10'>
         <div className='flex flex-col items-center'>
@@ -50,5 +48,3 @@ function Wedding() {
     </PageLayout>
   );
 }
-
-export default Wedding;

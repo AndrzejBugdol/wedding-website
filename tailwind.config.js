@@ -1,12 +1,9 @@
-import type { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
+/** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
 
-const config: Config = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+export default {
+  mode: 'jit',
+  purge: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   container: {
     center: true,
   },
@@ -19,7 +16,7 @@ const config: Config = {
       },
     },
     fontFamily: {
-      header: ['var(--angellaWhite)', 'sans-serif'],
+      header: ['AngellaWhite', 'sans-serif'],
     },
     colors: {
       mainHeader: '#D6A1E6',
@@ -44,4 +41,3 @@ const config: Config = {
   },
   plugins: [],
 };
-export default config;
