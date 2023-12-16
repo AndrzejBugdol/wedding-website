@@ -1,7 +1,7 @@
-import photo from '../assets/photos/naszahistoria_przyciete.jpg';
-import flowersPhoto from '../assets/photos/kwiaty2_przyciete.png';
-import { ScreenImage } from '../components/ScreenImage';
-import PageLayout from '../components/PageLayout';
+import photo from '@assets/photos/naszahistoria_przyciete.jpg';
+import flowersPhoto from '@assets/photos/kwiaty2_przyciete.png';
+import { ScreenImage } from '@components/ScreenImage';
+import PageLayout from '@components/PageLayout';
 
 export function About() {
   return (

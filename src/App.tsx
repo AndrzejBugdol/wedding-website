@@ -1,5 +1,5 @@
-import { About, Contact, Organization, Wedding, Hero } from './pages';
-import MenuBar from './components/MenuBar';
+import MenuBar from '@components/MenuBar';
+import { About, Contact, Organization, Wedding, Hero } from '@pages/index';
 
 function App() {
   return (

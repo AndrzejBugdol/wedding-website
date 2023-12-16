@@ -5,6 +5,7 @@ type Location = {
   description: string;
   mapsLink: string;
 };
+
 function Location({ src, alt, name, description, mapsLink }: Location) {
   return (
     <div className='flex flex-col items-center justify-between gap-7'>

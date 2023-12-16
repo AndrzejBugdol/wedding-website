@@ -1,12 +1,12 @@
-import keyIcon from '../assets/photos/ikona klucze.png';
-import kidIcon from '../assets/photos/ikona dziecko.png';
-import busIcon from '../assets/photos/ikona_autobus.png';
-import flowersIcon from '../assets/photos/ikona_kwiatki.png';
-import flowersPhoto from '../assets/photos/kwiaty4.png';
+import keyIcon from '@assets/photos/ikona klucze.png';
+import kidIcon from '@assets/photos/ikona dziecko.png';
+import busIcon from '@assets/photos/ikona_autobus.png';
+import flowersIcon from '@assets/photos/ikona_kwiatki.png';
+import flowersPhoto from '@assets/photos/kwiaty4.png';
 
-import PageLayout from '../components/PageLayout';
-import Tile from '../components/Tiles';
-import { LINKS } from '../constants';
+import PageLayout from '@components/PageLayout';
+import Tile from '@components/Tiles';
+import { LINKS } from '@src/constants';
 
 export function Organization() {
   return (

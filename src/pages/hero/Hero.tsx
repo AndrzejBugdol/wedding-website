@@ -1,8 +1,8 @@
-import ringsIcon from '../assets/photos/ikona_obraczki.png';
-import glassIcon from '../assets/photos/ikona_kieliszki.png';
-import photo from '../assets/photos/pierwsze_przyciete.jpg';
-import { ScreenImage } from '../components/ScreenImage';
-import PageLayout from '../components/PageLayout';
+import ringsIcon from '@assets/photos/ikona_obraczki.png';
+import glassIcon from '@assets/photos/ikona_kieliszki.png';
+import photo from '@assets/photos/pierwsze_przyciete.jpg';
+import { ScreenImage } from '@components/ScreenImage';
+import PageLayout from '@components/PageLayout';
 
 export function Hero() {
   return (

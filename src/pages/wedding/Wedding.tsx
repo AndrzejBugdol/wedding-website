@@ -1,10 +1,10 @@
-import Location from '../components/Location';
-import PageLayout from '../components/PageLayout';
-import ringsIcon from '../assets/photos/obraczki.png';
-import glassIcon from '../assets/photos/kieliszki.png';
-import flowersPhoto from '../assets/photos/kwiaty3.png';
+import Location from '@components/Location';
+import PageLayout from '@components/PageLayout';
+import ringsIcon from '@assets/photos/obraczki.png';
+import glassIcon from '@assets/photos/kieliszki.png';
+import flowersPhoto from '@assets/photos/kwiaty3.png';
 
-import { LINKS } from '../constants';
+import { LINKS } from '@src/constants';
 
 export function Wedding() {
   return (
