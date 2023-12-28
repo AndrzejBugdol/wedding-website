@@ -1,3 +1,6 @@
+import { useIntersection } from '@src/context/intersectionContext';
+import { useElementOnScreen } from '@src/hooks/useElementOnScreen';
+import { useCallback, useEffect } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 type PageLayoutProps = {
@@ -6,11 +9,33 @@ type PageLayoutProps = {
   id?: React.HTMLAttributes<HTMLDivElement>['id'];
 };
 
+const options: IntersectionObserverInit = {
+  threshold: 0.5,
+  rootMargin: '0px',
+};
+
 export const PageLayout = ({ children, id, className }: PageLayoutProps) => {
+  const { containerRef, isVisible } = useElementOnScreen(options);
+  const { setContainerRef } = useIntersection();
+
+  const updateRef = useCallback(() => {
+    setContainerRef(containerRef);
+  }, [containerRef, setContainerRef]);
+
+  useEffect(() => {
+    if (isVisible) {
+      const scrollTimeout = setTimeout(updateRef, 300);
+      return () => {
+        clearTimeout(scrollTimeout);
+      };
+    }
+  }, [containerRef, isVisible, setContainerRef, updateRef]);
+
   return (
     <div
       className='flex w-full items-start justify-center p-5 laptop:flex laptop:h-[800px] laptop:items-center'
       id={id}
+      ref={containerRef}
     >
       <div
         className={twMerge(

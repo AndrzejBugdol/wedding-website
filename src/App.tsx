@@ -5,7 +5,10 @@ const App = () => {
   return (
     <>
       <MenuBar />
-      <div className='flex flex-col items-center gap-4 text-textInfo laptop:block laptop:gap-0'>
+      <div
+        id='scrollArea'
+        className='flex flex-col items-center gap-4 text-textInfo laptop:block laptop:gap-0'
+      >
         <Hero />
         <About />
         <Wedding />
