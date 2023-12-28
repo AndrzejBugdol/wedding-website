@@ -1,10 +1,9 @@
 import ringsIcon from '@assets/photos/ikona_obraczki.png';
 import glassIcon from '@assets/photos/ikona_kieliszki.png';
 import photo from '@assets/photos/pierwsze_przyciete.jpg';
-import { ScreenImage } from '@components/ScreenImage';
-import PageLayout from '@components/PageLayout';
+import { ScreenImage, PageLayout } from '@components/index';
 
-export function Hero() {
+export const Hero = () => {
   return (
     <PageLayout id='home'>
       <ScreenImage src={photo} alt='andrzej-kasia' className='object-left' />
@@ -46,4 +45,4 @@ export function Hero() {
       </div>
     </PageLayout>
   );
-}
+};

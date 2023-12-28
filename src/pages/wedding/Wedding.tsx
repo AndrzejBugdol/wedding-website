@@ -1,12 +1,12 @@
-import Location from '@components/Location';
-import PageLayout from '@components/PageLayout';
+import { PageLayout } from '@components/index';
 import ringsIcon from '@assets/photos/obraczki.png';
 import glassIcon from '@assets/photos/kieliszki.png';
 import flowersPhoto from '@assets/photos/kwiaty3.png';
 
 import { LINKS } from '@src/constants';
+import { Location } from './components';
 
-export function Wedding() {
+export const Wedding = () => {
   return (
     <PageLayout id='wedding'>
       <img
@@ -47,4 +47,4 @@ export function Wedding() {
       </div>
     </PageLayout>
   );
-}
+};

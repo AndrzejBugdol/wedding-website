@@ -6,7 +6,13 @@ type Location = {
   mapsLink: string;
 };
 
-function Location({ src, alt, name, description, mapsLink }: Location) {
+export const Location = ({
+  src,
+  alt,
+  name,
+  description,
+  mapsLink,
+}: Location) => {
   return (
     <div className='flex flex-col items-center justify-between gap-7'>
       <img
@@ -27,6 +33,4 @@ function Location({ src, alt, name, description, mapsLink }: Location) {
       </a>
     </div>
   );
-}
-
-export default Location;
+};

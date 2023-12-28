@@ -1,7 +1,7 @@
-import MenuBar from '@components/MenuBar';
+import { MenuBar } from '@src/components';
 import { About, Contact, Organization, Wedding, Hero } from '@pages/index';
 
-function App() {
+const App = () => {
   return (
     <>
       <MenuBar />
@@ -14,6 +14,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;

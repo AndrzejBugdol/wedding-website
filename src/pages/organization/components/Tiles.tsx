@@ -1,13 +1,28 @@
 import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
+const imageVariants = {
+  '50': 'h-[50px]',
+  '80': 'h-[80px]',
+  '100': 'h-[100px]',
+  '100-responsive': 'h-[100px] smallScreen:h-[70px]',
+};
+
 type Tile = {
-  image: ReactNode;
+  variant: keyof typeof imageVariants;
+  imageSrc: string;
+  imageAlt: string;
   children: ReactNode;
   className?: string;
 };
 
-function Tile({ image, children, className }: Tile) {
+export const Tile = ({
+  imageSrc,
+  imageAlt,
+  variant,
+  children,
+  className,
+}: Tile) => {
   return (
     <div
       className={twMerge(
@@ -18,9 +33,7 @@ function Tile({ image, children, className }: Tile) {
       <div className='flex items-center justify-center p-2 text-justify'>
         {children}
       </div>
-      {image}
+      <img src={imageSrc} alt={imageAlt} className={imageVariants[variant]} />
     </div>
   );
-}
-
-export default Tile;
+};

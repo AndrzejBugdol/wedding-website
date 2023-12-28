@@ -1,9 +1,8 @@
 import photo from '@assets/photos/naszahistoria_przyciete.jpg';
 import flowersPhoto from '@assets/photos/kwiaty2_przyciete.png';
-import { ScreenImage } from '@components/ScreenImage';
-import PageLayout from '@components/PageLayout';
+import { PageLayout, ScreenImage } from '@components/index';
 
-export function About() {
+export const About = () => {
   return (
     <PageLayout id='about' className='flex-col-reverse justify-between'>
       <div className='flex h-full flex-col items-center justify-between laptop:w-3/6'>
@@ -31,4 +30,4 @@ export function About() {
       <ScreenImage src={photo} alt='about' />
     </PageLayout>
   );
-}
+};

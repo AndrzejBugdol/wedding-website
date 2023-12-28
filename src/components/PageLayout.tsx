@@ -6,7 +6,7 @@ type PageLayoutProps = {
   id?: React.HTMLAttributes<HTMLDivElement>['id'];
 };
 
-function PageLayout({ children, id, className }: PageLayoutProps) {
+export const PageLayout = ({ children, id, className }: PageLayoutProps) => {
   return (
     <div
       className='flex w-full items-start justify-center p-5 laptop:flex laptop:h-[800px] laptop:items-center'
@@ -22,6 +22,4 @@ function PageLayout({ children, id, className }: PageLayoutProps) {
       </div>
     </div>
   );
-}
-
-export default PageLayout;
+};

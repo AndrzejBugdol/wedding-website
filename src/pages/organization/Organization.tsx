@@ -3,12 +3,12 @@ import kidIcon from '@assets/photos/ikona dziecko.png';
 import busIcon from '@assets/photos/ikona_autobus.png';
 import flowersIcon from '@assets/photos/ikona_kwiatki.png';
 import flowersPhoto from '@assets/photos/kwiaty4.png';
-
-import PageLayout from '@components/PageLayout';
-import Tile from '@components/Tiles';
+import { PageLayout } from '@components/index';
 import { LINKS } from '@src/constants';
 
-export function Organization() {
+import { TilesContainer, Tile } from './components';
+
+export const Organization = () => {
   return (
     <PageLayout id='info'>
       <img
@@ -23,12 +23,12 @@ export function Organization() {
           </h1>
         </div>
         <div className='flex flex-col gap-6'>
-          <div className='flex flex-col items-center justify-center gap-6 laptop:flex-row'>
+          <TilesContainer>
             <Tile
+              imageAlt='org_key'
+              imageSrc={keyIcon}
+              variant='100'
               className='h-[150px]'
-              image={
-                <img src={keyIcon} alt='org_key' className='h-[100px]'></img>
-              }
             >
               <h4>
                 Dla wszystkich gości przyjezdnych ze Śląska oraz Krakowa
@@ -36,9 +36,9 @@ export function Organization() {
               </h4>
             </Tile>
             <Tile
-              image={
-                <img src={kidIcon} alt='org_kid' className='h-[80px]'></img>
-              }
+              imageAlt='org_kid'
+              imageSrc={kidIcon}
+              variant='80'
               className='h-[150px]'
             >
               <h4>
@@ -46,12 +46,12 @@ export function Organization() {
                 będzie animator, który zajmie się pociechami.
               </h4>
             </Tile>
-          </div>
-          <div className='flex flex-col items-center justify-center gap-6 laptop:flex-row'>
+          </TilesContainer>
+          <TilesContainer>
             <Tile
-              image={
-                <img src={busIcon} alt='org_bus' className='h-[50px]'></img>
-              }
+              imageAlt='org_bus'
+              imageSrc={busIcon}
+              variant='50'
               className='flex-col-reverse gap-0 p-2'
             >
               <h4>
@@ -62,13 +62,9 @@ export function Organization() {
               </h4>
             </Tile>
             <Tile
-              image={
-                <img
-                  src={flowersIcon}
-                  alt='org_flowers'
-                  className='h-[100px] smallScreen:h-[70px]'
-                ></img>
-              }
+              imageAlt='org_flowers'
+              imageSrc={flowersIcon}
+              variant='100-responsive'
               className='flex-row-reverse'
             >
               <h4>
@@ -85,9 +81,9 @@ export function Organization() {
                 </a>
               </h4>
             </Tile>
-          </div>
+          </TilesContainer>
         </div>
       </div>
     </PageLayout>
   );
-}
+};
