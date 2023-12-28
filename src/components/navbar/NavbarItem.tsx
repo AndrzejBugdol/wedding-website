@@ -19,7 +19,7 @@ export const NavbarItem = ({ href, title }: NavbarItemProps) => {
   return (
     <a
       className={`leading-6 hover:cursor-pointer ${
-        href === refHash ? 'border-b-[1.5px] border-solid border-pastelRed' : ''
+        href === refHash && 'border-b-[1.5px] border-solid border-pastelRed'
       }`}
       onClick={handleOnClick}
     >
