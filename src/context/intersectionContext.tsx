@@ -40,6 +40,14 @@ export function IntersectionContextProvider({
     setRefHash(`#${ref?.current.id}`);
   }, [ref, setRefHash]);
 
+  const handleNavigate = (href: string) => {
+    setRefHash(href);
+    const sectionToShow = document.querySelector(href);
+    if (sectionToShow) {
+      sectionToShow.scrollIntoView();
+    }
+  };
+
   useEffect(() => {
     if (window.location.hash !== refHash) {
       history.replaceState({}, '', refHash);
@@ -55,7 +63,7 @@ export function IntersectionContextProvider({
       containerRef: ref,
       setContainerRef: setRef,
       refHash: refHash,
-      navigate: setRefHash,
+      navigate: handleNavigate,
     }),
     [ref, refHash]
   );

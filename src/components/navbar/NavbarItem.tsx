@@ -10,10 +10,6 @@ export const NavbarItem = ({ href, title }: NavbarItemProps) => {
 
   const handleOnClick = () => {
     navigate(href);
-    const sectionToShow = document.querySelector(href);
-    if (sectionToShow) {
-      sectionToShow.scrollIntoView();
-    }
   };
 
   return (
