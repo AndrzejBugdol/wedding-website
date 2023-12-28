@@ -6,16 +6,22 @@ type NavbarItemProps = {
 };
 
 export const NavbarItem = ({ href, title }: NavbarItemProps) => {
-  const { refHash } = useIntersection();
+  const { refHash, navigate } = useIntersection();
+
+  const handleOnClick = () => {
+    navigate(href);
+    const sectionToShow = document.querySelector(href);
+    if (sectionToShow) {
+      sectionToShow.scrollIntoView();
+    }
+  };
 
   return (
     <a
-      className={`leading-6 ${
-        href === refHash
-          ? 'border-b-[1.5px] border-solid border-pastelOrange'
-          : ''
+      className={`leading-6 hover:cursor-pointer ${
+        href === refHash ? 'border-b-[1.5px] border-solid border-pastelRed' : ''
       }`}
-      href={href}
+      onClick={handleOnClick}
     >
       {title}
     </a>

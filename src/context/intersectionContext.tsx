@@ -14,12 +14,14 @@ type ContextType = {
   containerRef: RefObject<HTMLBodyElement> | null;
   refHash: string | undefined;
   setContainerRef: (newRef: RefObject<HTMLBodyElement>) => void;
+  navigate: (hash: string) => void;
 };
 
 export const IntersectionContext = createContext<ContextType>({
   containerRef: null,
   refHash: undefined,
   setContainerRef: () => undefined,
+  navigate: () => undefined,
 });
 
 type IntersectionContextProviderProps = {
@@ -39,17 +41,21 @@ export function IntersectionContextProvider({
   }, [ref, setRefHash]);
 
   useEffect(() => {
-    handleRefHashUpdate();
     if (window.location.hash !== refHash) {
-      history.pushState({}, window.toString(), refHash);
+      history.replaceState({}, '', refHash);
     }
   }, [handleRefHashUpdate, refHash]);
+
+  useEffect(() => {
+    handleRefHashUpdate();
+  }, [handleRefHashUpdate, ref]);
 
   const context = useMemo<ContextType>(
     () => ({
       containerRef: ref,
       setContainerRef: setRef,
       refHash: refHash,
+      navigate: setRefHash,
     }),
     [ref, refHash]
   );
