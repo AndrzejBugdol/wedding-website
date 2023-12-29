@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
-import { IntersectionContextProvider } from './context/intersectionContext.tsx';
+import { IntersectionContextProvider } from './context/IntersectionContext.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

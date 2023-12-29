@@ -1,4 +1,4 @@
-import { useIntersection } from '@src/context/intersectionContext';
+import { useIntersection } from '@src/context/IntersectionContext';
 
 type NavbarItemProps = {
   title: string;

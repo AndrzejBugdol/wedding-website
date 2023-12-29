@@ -1,4 +1,4 @@
-import { useIntersection } from '@src/context/intersectionContext';
+import { useIntersection } from '@src/context/IntersectionContext';
 import { useElementOnScreen } from '@src/hooks/useElementOnScreen';
 import { useCallback, useEffect } from 'react';
 import { twMerge } from 'tailwind-merge';
@@ -16,11 +16,11 @@ const options: IntersectionObserverInit = {
 
 export const PageLayout = ({ children, id, className }: PageLayoutProps) => {
   const { containerRef, isVisible } = useElementOnScreen(options);
-  const { setContainerRef } = useIntersection();
+  const { setRefHash } = useIntersection();
 
   const updateRef = useCallback(() => {
-    setContainerRef(containerRef);
-  }, [containerRef, setContainerRef]);
+    setRefHash(containerRef);
+  }, [containerRef, setRefHash]);
 
   useEffect(() => {
     if (isVisible) {
@@ -29,7 +29,7 @@ export const PageLayout = ({ children, id, className }: PageLayoutProps) => {
         clearTimeout(scrollTimeout);
       };
     }
-  }, [containerRef, isVisible, setContainerRef, updateRef]);
+  }, [containerRef, isVisible, setRefHash, updateRef]);
 
   return (
     <div

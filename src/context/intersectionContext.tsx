@@ -11,16 +11,14 @@ import {
 } from 'react';
 
 type ContextType = {
-  containerRef: RefObject<HTMLBodyElement> | null;
   refHash: string | undefined;
-  setContainerRef: (newRef: RefObject<HTMLBodyElement>) => void;
+  setRefHash: (newRef: RefObject<HTMLBodyElement>) => void;
   navigate: (hash: string) => void;
 };
 
 export const IntersectionContext = createContext<ContextType>({
-  containerRef: null,
   refHash: undefined,
-  setContainerRef: () => undefined,
+  setRefHash: () => undefined,
   navigate: () => undefined,
 });
 
@@ -28,17 +26,19 @@ type IntersectionContextProviderProps = {
   children?: ReactNode;
 };
 
-export function IntersectionContextProvider({
+export const IntersectionContextProvider = ({
   children,
-}: IntersectionContextProviderProps) {
-  const [ref, setRef] = useState<RefObject<HTMLBodyElement> | null>(null);
+}: IntersectionContextProviderProps) => {
   const [refHash, setRefHash] = useState<string | undefined>(undefined);
 
-  const handleRefHashUpdate = useCallback(() => {
-    if (isNil(ref?.current)) return setRefHash(undefined);
+  const handleRefHashUpdate = useCallback(
+    (ref: RefObject<HTMLBodyElement>) => {
+      if (isNil(ref?.current)) return setRefHash(undefined);
 
-    setRefHash(`#${ref?.current.id}`);
-  }, [ref, setRefHash]);
+      setRefHash(`#${ref?.current.id}`);
+    },
+    [setRefHash]
+  );
 
   const handleNavigate = (href: string) => {
     setRefHash(href);
@@ -54,18 +54,13 @@ export function IntersectionContextProvider({
     }
   }, [handleRefHashUpdate, refHash]);
 
-  useEffect(() => {
-    handleRefHashUpdate();
-  }, [handleRefHashUpdate, ref]);
-
   const context = useMemo<ContextType>(
     () => ({
-      containerRef: ref,
-      setContainerRef: setRef,
       refHash: refHash,
+      setRefHash: handleRefHashUpdate,
       navigate: handleNavigate,
     }),
-    [ref, refHash]
+    [handleRefHashUpdate, refHash]
   );
 
   return (
@@ -73,9 +68,9 @@ export function IntersectionContextProvider({
       {children}
     </IntersectionContext.Provider>
   );
-}
+};
 
-export function useIntersection() {
+export const useIntersection = () => {
   const context = useContext(IntersectionContext);
   if (context === undefined) {
     throw new Error(
@@ -83,4 +78,4 @@ export function useIntersection() {
     );
   }
   return context;
-}
+};
