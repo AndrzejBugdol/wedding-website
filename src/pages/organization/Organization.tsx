@@ -28,22 +28,23 @@ export const Organization = () => {
               imageAlt='org_key'
               imageSrc={keyIcon}
               variant='100'
-              className='h-[150px]'
+              className='h-[150px] smallScreen:mt-4'
             >
               <h4>
                 Dla wszystkich gości przyjezdnych ze Śląska oraz Krakowa
-                zapewniamy nocleg oraz śniadanie w Domu Pielgrzyma w Leżajsku.
+                zapewniamy nocleg w dniu wesela oraz śniadanie następnego dnia w
+                Domu Pielgrzyma w Leżajsku.
               </h4>
             </Tile>
             <Tile
               imageAlt='org_kid'
               imageSrc={kidIcon}
-              variant='80'
-              className='h-[150px]'
+              variant='100'
+              className='h-[150px] smallScreen:gap-6'
             >
               <h4>
                 Zapraszamy najmłodszych na wesele! Od 18:00 do 21:00 na sali
-                będzie animator, który zajmie się pociechami.
+                będą animatorzy, którzy zajmą się pociechami.
               </h4>
             </Tile>
           </TilesContainer>

@@ -4,6 +4,7 @@ import { twMerge } from 'tailwind-merge';
 const imageVariants = {
   '50': 'h-[50px]',
   '80': 'h-[80px]',
+  '80-responsive': 'h-[100px] smallScreen:h-[80px]',
   '100': 'h-[100px]',
   '100-responsive': 'h-[100px] smallScreen:h-[70px]',
 };
