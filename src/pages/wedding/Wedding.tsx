@@ -1,7 +1,4 @@
 import { PageLayout } from '@components/index';
-import ringsIcon from '@assets/photos/obraczki.png';
-import glassIcon from '@assets/photos/kieliszki.png';
-import flowersPhoto from '@assets/photos/kwiaty3.png';
 
 import { LINKS } from '@src/constants';
 import { Location } from './components';
@@ -10,9 +7,10 @@ export const Wedding = () => {
   return (
     <PageLayout id='wedding'>
       <img
-        src={flowersPhoto}
+        src='assets/photos/kwiaty3.png'
         alt='wedding_flowers'
         className='absolute -right-24 -top-16 z-10 h-[200px] scale-[65%] smallScreen:scale-[45%] laptop:-right-10 laptop:-top-10 laptop:scale-100'
+        loading='lazy'
       />
       <div className='flex h-full w-full flex-col items-center justify-evenly p-10 smallScreen:p-2'>
         <div className='flex flex-col items-center'>
@@ -27,7 +25,7 @@ export const Wedding = () => {
           <Location
             name='KOŚCIÓŁ PW. ŚW, BARBARY'
             description='GRODZISKO DOLNE 248'
-            src={ringsIcon}
+            src='assets/photos/obraczki.png'
             alt='wedding_obraczki'
             mapsLink={LINKS.wedding}
           />
@@ -39,7 +37,7 @@ export const Wedding = () => {
           <Location
             name='VILLA PRESTO'
             description='BRZÓZA KRÓLEWSKA 1030'
-            src={glassIcon}
+            src='assets/photos/kieliszki.png'
             alt='wedding_kieliszki'
             mapsLink={LINKS.presto}
           />

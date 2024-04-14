@@ -1,8 +1,3 @@
-import keyIcon from '@assets/photos/ikona klucze.png';
-import kidIcon from '@assets/photos/ikona dziecko.png';
-import busIcon from '@assets/photos/ikona_autobus.png';
-import flowersIcon from '@assets/photos/ikona_kwiatki.png';
-import flowersPhoto from '@assets/photos/kwiaty4.png';
 import { PageLayout } from '@components/index';
 import { LINKS } from '@src/constants';
 
@@ -12,9 +7,10 @@ export const Organization = () => {
   return (
     <PageLayout id='info'>
       <img
-        src={flowersPhoto}
+        src='assets/photos/kwiaty4.png'
         alt='org_flowers'
         className='smallScreen:-top-15 smallScreen:-right-15 absolute -right-10 -top-10 z-10 h-[200px] scale-[90%] smallScreen:scale-[60%] laptop:scale-100'
+        loading='lazy'
       />
       <div className='mb-4 flex h-full w-full flex-col items-center justify-evenly pt-10 laptop:mb-0 laptop:pt-0'>
         <div className='flex flex-col items-center'>
@@ -26,7 +22,7 @@ export const Organization = () => {
           <TilesContainer>
             <Tile
               imageAlt='org_key'
-              imageSrc={keyIcon}
+              imageSrc='assets/photos/ikona klucze.png'
               variant='100'
               className='h-[150px] smallScreen:mt-4'
             >
@@ -38,7 +34,7 @@ export const Organization = () => {
             </Tile>
             <Tile
               imageAlt='org_kid'
-              imageSrc={kidIcon}
+              imageSrc='assets/photos/ikona dziecko.png'
               variant='100'
               className='h-[150px] smallScreen:gap-6'
             >
@@ -51,7 +47,7 @@ export const Organization = () => {
           <TilesContainer>
             <Tile
               imageAlt='org_bus'
-              imageSrc={busIcon}
+              imageSrc='assets/photos/ikona_autobus.png'
               variant='50'
               className='flex-col-reverse gap-0 p-2'
             >
@@ -64,7 +60,7 @@ export const Organization = () => {
             </Tile>
             <Tile
               imageAlt='org_flowers'
-              imageSrc={flowersIcon}
+              imageSrc='assets/photos/ikona_kwiatki.png'
               variant='100-responsive'
               className='flex-row-reverse'
             >

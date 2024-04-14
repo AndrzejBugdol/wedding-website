@@ -34,7 +34,12 @@ export const Tile = ({
       <div className='flex items-center justify-center p-2 text-justify'>
         {children}
       </div>
-      <img src={imageSrc} alt={imageAlt} className={imageVariants[variant]} />
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        className={imageVariants[variant]}
+        loading='lazy'
+      />
     </div>
   );
 };

@@ -1,5 +1,3 @@
-import photo from '@assets/photos/teneryfa_przyciete.jpg';
-import flowersPhoto from '@assets/photos/kwiaty5.png';
 import { ScreenImage, PageLayout } from '@components/index';
 import { ContactTile } from './components';
 
@@ -18,12 +16,13 @@ export const Contact = () => {
           <ContactTile title='Andrzej' number={import.meta.env.VITE_A_NUMBER} />
         </div>
         <img
-          src={flowersPhoto}
+          src='assets/photos/kwiaty5.png'
           alt='contact_flowers'
           className='h-[100px] w-fit laptop:h-[140px]'
+          loading='lazy'
         />
       </div>
-      <ScreenImage src={photo} alt='contact' />
+      <ScreenImage src='assets/photos/teneryfa_przyciete.jpg' alt='contact' />
     </PageLayout>
   );
 };
