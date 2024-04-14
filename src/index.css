@@ -10,7 +10,8 @@
 
 @font-face {
   font-family: 'AngellaWhite';
-  src: url('/fonts/Angella\ White.otf'); /*URL to font*/
+  src: url('/fonts/Angella\ White.otf') format('opentype');
+  font-display: swap;
 }
 
 body {

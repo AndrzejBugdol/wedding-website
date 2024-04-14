@@ -15,6 +15,7 @@ export const ScreenImage = ({ src, alt, bg, className }: ScreenImageProps) => {
         )}
         src={src}
         alt={alt}
+        loading='lazy'
       ></img>
     </div>
   );

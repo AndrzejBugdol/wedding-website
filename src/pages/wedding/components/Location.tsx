@@ -19,6 +19,7 @@ export const Location = ({
         src={src}
         alt={alt}
         className='h-[160px] smallScreen:h-[100px]'
+        loading='lazy'
       ></img>
       <div className='flex flex-col items-center justify-center text-sm'>
         <h4 className='text-center font-bold'>{name}</h4>

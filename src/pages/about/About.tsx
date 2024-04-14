@@ -1,5 +1,3 @@
-import photo from '@assets/photos/naszahistoria_przyciete.jpg';
-import flowersPhoto from '@assets/photos/kwiaty2_przyciete.png';
 import { PageLayout, ScreenImage } from '@components/index';
 
 export const About = () => {
@@ -22,12 +20,16 @@ export const About = () => {
           </h4>
         </div>
         <img
-          src={flowersPhoto}
+          src='assets/photos/kwiaty2_przyciete.png'
           alt='about_flowers'
           className='h-[150px] w-full smallScreen:h-[75px]'
+          loading='lazy'
         />
       </div>
-      <ScreenImage src={photo} alt='about' />
+      <ScreenImage
+        src='assets/photos/naszahistoria_przyciete.jpg'
+        alt='about'
+      />
     </PageLayout>
   );
 };
