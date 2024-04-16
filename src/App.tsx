@@ -1,5 +1,12 @@
 import { MenuBar } from '@src/components';
-import { About, Contact, Organization, Wedding, Hero } from '@pages/index';
+import {
+  About,
+  Contact,
+  Organization,
+  Wedding,
+  Hero,
+  Visitors,
+} from '@pages/index';
 
 const App = () => {
   return (
@@ -13,6 +20,7 @@ const App = () => {
         <About />
         <Wedding />
         <Organization />
+        <Visitors />
         <Contact />
       </div>
     </>

@@ -40,6 +40,9 @@ export const MobileNavBar = () => {
           <a className='leading-6' href='#info' onClick={handleNavChange}>
             ORGANIZACJA
           </a>
+          <a className='leading-6' href='#visitors' onClick={handleNavChange}>
+            DLA PRZYJEZDNYCH
+          </a>
           <a className='leading-6' href='#contact' onClick={handleNavChange}>
             KONTAKT
           </a>
