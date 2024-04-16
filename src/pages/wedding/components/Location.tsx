@@ -1,3 +1,5 @@
+import { Link } from '@src/components';
+
 type Location = {
   src: string;
   alt: string;
@@ -25,13 +27,7 @@ export const Location = ({
         <h4 className='text-center font-bold'>{name}</h4>
         <h4 className='text-center'>{description}</h4>
       </div>
-      <a
-        href={mapsLink}
-        target='_blank'
-        className='tracking-wider underline hover:text-pastelPink'
-      >
-        MAPY GOOGLE
-      </a>
+      <Link href={mapsLink} />
     </div>
   );
 };

@@ -7,6 +7,7 @@ export const Navbar = () => {
       <NavbarItem title='O NAS' href='#about' />
       <NavbarItem title='WESELE' href='#wedding' />
       <NavbarItem title='ORGANIZACJA' href='#info' />
+      <NavbarItem title='DLA PRZYJEZDNYCH' href='#visitors' />
       <NavbarItem title='KONTAKT' href='#contact' />
     </ul>
   );
