@@ -18,7 +18,7 @@ export const Contact = () => {
         <img
           src='assets/photos/kwiaty5.png'
           alt='contact_flowers'
-          className='h-[100px] w-fit laptop:h-[140px]'
+          className='h-[100px] w-auto object-cover laptop:h-[140px]'
           loading='lazy'
         />
       </div>

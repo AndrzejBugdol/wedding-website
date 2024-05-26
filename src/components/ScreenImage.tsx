@@ -11,12 +11,12 @@ export const ScreenImage = ({ src, alt, bg, className }: ScreenImageProps) => {
       <img
         className={twMerge(
           className,
-          'object-top laptop:mt-0 laptop:w-full laptop:object-cover'
+          'h-auto w-full object-contain laptop:mt-0 laptop:h-full laptop:w-auto laptop:object-cover'
         )}
         src={src}
         alt={alt}
         loading='lazy'
-      ></img>
+      />
     </div>
   );
 };

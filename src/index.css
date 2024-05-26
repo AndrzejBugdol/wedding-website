@@ -22,3 +22,16 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 1024px) {
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
